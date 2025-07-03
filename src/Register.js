@@ -17,15 +17,16 @@ const Register = () => {
 
   return (
     <form onSubmit={handleRegister}>
-    <div>  <input
+    <div> <input
   type="email"
   placeholder="Email"
   value={form.username}
   onChange={(e) => setForm({ ...form, username: e.target.value })}
-  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-  title="Enter a valid email address"
+  pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+  title="Please enter a valid Gmail address (e.g., example@gmail.com)"
   required
 />
+
 </div>
      <input
   type="password"
